@@ -112,3 +112,34 @@ const sub1 = sub(7,3);
 console.log(sub1);
 console.log(sub(9,3));
 
+// map
+// It map each and every element of an array to a new array or function and returns the new array.
+const num = [1,2,3,4,5];
+
+// function double(num){
+//     return num * 2;
+// }
+// const output = num.map(double);
+// console.log(output);
+
+const op = num.map(function double(num){
+    return num * 2;
+});
+console.log(op);
+
+// filter
+// It filters the elements of an array based on a condition and 
+// returns a new array with the elements that satisfy the condition.
+const res = num.filter(function even(num){
+    return num%2 == 0;
+});
+
+console.log(res);
+
+// reduce
+// It reduces the array to a single value by applying a function to each element of the array.
+const sum3 = num.reduce(function(accumulator, currentValue){
+    return accumulator + currentValue;
+},0);
+
+console.log(sum3);
